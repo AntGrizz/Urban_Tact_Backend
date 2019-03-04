@@ -1,5 +1,4 @@
 class Api::V1::UsersController < ApplicationController
-before_action :find_user
 
  def index
     @users = User.all
@@ -20,9 +19,5 @@ before_action :find_user
   def user_params
     params.permit(:username, :image, :email)
   end
-
-  def find_user
-    @user = User.find(params[:id])
-  end
-
+  
 end

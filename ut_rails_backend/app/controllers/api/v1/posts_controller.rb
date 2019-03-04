@@ -1,5 +1,4 @@
 class Api::V1::PostsController < ApplicationController
-  before_action :find_post
 
  def index
     @posts = Post.all
@@ -21,8 +20,5 @@ class Api::V1::PostsController < ApplicationController
     params.permit(:title, :content, :description, :image, :video, :link, :tags)
   end
 
-  def find_post
-    @post = Post.find(params[:id])
-  end
 
 end
