@@ -1,6 +1,6 @@
 #tag-bar {
   height: 10vh;
-  background: black;
+  background: rgb(0, 0, 53);
   display: flex;
   /* justify-content: space-around; */
   align-items: center;
@@ -12,11 +12,11 @@
 }
 
 .tag-element {
-  color: white;
+  color: rgb(225, 227, 181);
   text-decoration: none;
  display: inline;
  padding: 10px;
- font-size: 15pt
+ font-size: 15pt;
 }
 
 li:hover {
@@ -24,16 +24,17 @@ li:hover {
   color: rgb(222, 77, 103);
 }
 #UT-header{
-  background: grey;
+  background: #DEDEDE;
   margin: 0;
   padding: 5px;
+  text-align: center;
 }
 
 #post-info {
   display: flex;
   flex-flow: column;
   align-items: left;
-  background-color: rgb(211, 212, 216);
+  background-color: #FFE3B5;
 }
 
 #post-info img {
@@ -48,5 +49,5 @@ li:hover {
 }
 
 h2 {
-  color: rgb(222, 77, 103);
+  color: rgb(0, 0, 53);
 }
