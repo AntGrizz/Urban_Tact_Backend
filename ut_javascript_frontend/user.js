@@ -4,11 +4,11 @@ class User {
     this.username = user.username;
     this.email = user.email;
     this.image = user.image;
-    Post.all.push(this);
+    User.all.push(this);
   }
 
   renderUsers() {
-    document;
+    document
   }
 }
 
