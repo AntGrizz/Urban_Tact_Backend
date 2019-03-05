@@ -28,6 +28,7 @@ Check out our selection of backstage shots in the gallery above, and be sure to 
   description: "The collection’s run of distorted, checkered flag-like layers added a hypnotic touch to a stripped-back selection of pit crew-inspired outerwear pieces. From tailored racing suits, to oversized, black-and-white stripe puffer jackets and rubberized kidney belt accessories, Virgil Abloh’s latest presentation was packed full of the same energy one might expect from a day at the races.", image: "https://static.highsnobiety.com/wp-content/uploads/2019/03/01113920/off-white-fw19-his-hers-pfw-show-03-800x1200.jpg", 
   video: "null",
   tags: "Fashion",
+  likes: 12,
   user_id: jake.id
   }, 
   
@@ -45,6 +46,7 @@ The fragrance is the second release in D.S. & Durga’s Gold Label line, followi
   image: "https://static.highsnobiety.com/wp-content/uploads/2019/02/14152005/ds-durga-ds-ear-de-parfum-01-1200x800.jpg", link: "https://www.highsnobiety.com/p/ds-durga-ds-eau-de-parfum/", 
   video: "https://www.youtube.com/watch?v=9YyWS9jTQeE",
   tags: "Lifestyle",
+  likes: 4,
   user_id: jake.id
 
   }, 
@@ -80,6 +82,7 @@ Those are the keys to eating protein for muscle. So now go build some muscle.
   link: "https://www.menshealth.com/fitness/a26623371/post-workout-protein-overrated/", 
   video: "null",
   tags: "Health & Fitness",
+  likes: 8,
   user_id: paul.id
   }, 
 
@@ -90,6 +93,7 @@ Those are the keys to eating protein for muscle. So now go build some muscle.
     video: "", 
     link: "https://www.gq.com/story/best-products-for-men-with-long-hair", 
     tags: "Grooming",
+    likes: 10,
     user_id: mike.id},
   
   { title: "Business cards are for dummies, you dummy", 
@@ -99,6 +103,7 @@ Business cards, however, are for worker bees. Everyone worth their Dyson CSYS Ta
 image: "https://gq-images.condecdn.net/image/qXOPP5d23kY/crop/1620/landscape/f/card-02-gq-22aug18_b.jpg", 
 video: "", 
 link: "https://www.gq-magazine.co.uk/article/forget-business-cards-you-need-calling-cards", tags: "Lifestyle", 
+likes: 2,
 user_id: bill.id},
 
 
@@ -109,5 +114,6 @@ user_id: bill.id},
   video: "", 
   link: "https://www.gq-magazine.co.uk/article/how-to-improve-your-brain-function", 
   tags: "Health & Fitness",
+  likes: 6,
   user_id: stephon.id}
 ])
