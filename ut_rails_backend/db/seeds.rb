@@ -26,7 +26,7 @@ Despite the very obvious aesthetic cues, “HIS & HERS” extended past all afor
 
 Check out our selection of backstage shots in the gallery above, and be sure to let us know in the comment section following what you are feeling." ,
   description: "The collection’s run of distorted, checkered flag-like layers added a hypnotic touch to a stripped-back selection of pit crew-inspired outerwear pieces. From tailored racing suits, to oversized, black-and-white stripe puffer jackets and rubberized kidney belt accessories, Virgil Abloh’s latest presentation was packed full of the same energy one might expect from a day at the races.", image: "https://static.highsnobiety.com/wp-content/uploads/2019/03/01113920/off-white-fw19-his-hers-pfw-show-03-800x1200.jpg",
-  video: "null",
+  video: '<iframe width="560" height="315" src="https://www.youtube.com/embed/U6SZR9VMfKw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>',
   tags: "Fashion",
   likes: 12,
   user_id: jake.id
@@ -44,7 +44,7 @@ The fragrance is the second release in D.S. & Durga’s Gold Label line, followi
 
   description: "Cult perfumer D.S. & Durga has launched a new eau de parfum fragrance called D.S., which the brands says is a 'pure vision of India.'",
   image: "https://static.highsnobiety.com/wp-content/uploads/2019/02/14152005/ds-durga-ds-ear-de-parfum-01.jpg", link: "https://www.highsnobiety.com/p/ds-durga-ds-eau-de-parfum/",
-  video: "https://www.youtube.com/watch?v=9YyWS9jTQeE",
+  video: '<iframe width="560" height="315" src="https://www.youtube.com/embed/G3yjxhi7Wzc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>',
   tags: "Lifestyle",
   likes: 4,
   user_id: jake.id
@@ -80,7 +80,7 @@ Those are the keys to eating protein for muscle. So now go build some muscle.
 ",
   description: "Stop the post-workout protein shake obsession and focus on protein all day instead.", image: "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/gettyimages-523265143-1551714877.jpg",
   link: "https://www.menshealth.com/fitness/a26623371/post-workout-protein-overrated/",
-  video: "null",
+  video: '<iframe width="560" height="315" src="https://www.youtube.com/embed/42PTdcxTfpc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>',
   tags: "Health & Fitness",
   likes: 8,
   user_id: paul.id
@@ -90,7 +90,7 @@ Those are the keys to eating protein for muscle. So now go build some muscle.
     description: "Growing an epic mane? GQ's Best Stuff has you covered with the tips and products you need.",
     content: "Biotin is a well-known supplement for growing your hair faster and fuller. (And your nails, too!) But it's not the only one, nor the best one, that can fortify your hair. Instead, you should turn to some of the methods that dermatologists recommend for the guys with thinning hair. Products that stimulate hair growth will also strengthen the hair that you already have, and you need strong hair now more than ever. Try supplements like Nutrafol or Viviscal, and a topical Minoxidil OTC 5% solution, which stimulate blood flow to the follicles and in turn thickens and strengthens hair growth. (It can even stimulate some growth on the crown for inactive follicles.) All of those are available without a prescription, though it's still important to talk to a board-certified dermatologist about the supplement plan that's right for you. They may even recommend other hair growth products like Finasteride, which needs to be more closely monitored than other 'solutions'.",
     image: "https://media.gq.com/photos/5c78431ae718486b18bad771/16:9/w_1280%2Cc_limit/GQ-BestStuff-GroomingCreams.png",
-    video: "",
+    video: '<iframe width="560" height="315" src="https://www.youtube.com/embed/FzXee9UKd7I" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>',
     link: "https://www.gq.com/story/best-products-for-men-with-long-hair",
     tags: "Grooming",
     likes: 10,
@@ -101,7 +101,7 @@ Those are the keys to eating protein for muscle. So now go build some muscle.
     content: "That's bone. And the lettering is something called Silian Grail. Every businessman – actually, hold the business – every man knows that scene from American Psycho. Set in the Wall Street boom of Eighties Manhattan, the lives of Patrick Bateman and his circle of dick-swinging money locusts, as painted so exquisitely by author Bret Easton Ellis, is one of those tales that stays with the reader long after finishing the last line. In particular, that excruciating business card scene, remembered most commonly from the film adaptation, illustrates an innate fear all successful men have: that however costly, shiny and tasteful one's status symbols, there will always be a serial killer in an expensive suit who is more pedantic than you about aesthetic refinement.
 Business cards, however, are for worker bees. Everyone worth their Dyson CSYS Task Light knows this. They fall into the same category as briefcases. Yes, you like the idea of owning one. It might even make you feel more professional for a beat, but ultimately it's worthless. Other than your trips to the Far East – where card giving is purely about respect and protocol – when was the last time you gave your business card to a client you cared about? Oh, sure there was that time outside Kettner's Townhouse when Dave from marketing needed a roach for the king-size blunt he was rolling, but other than that the stack of biz cards on your desk has remained largely unfingered for years.",
 image: "https://gq-images.condecdn.net/image/qXOPP5d23kY/crop/1620/landscape/f/card-02-gq-22aug18_b.jpg",
-video: "",
+video: '<iframe width="560" height="315" src="https://www.youtube.com/embed/cISYzA36-ZY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>',
 link: "https://www.gq-magazine.co.uk/article/forget-business-cards-you-need-calling-cards", tags: "Lifestyle",
 likes: 2,
 user_id: bill.id},
@@ -111,7 +111,7 @@ user_id: bill.id},
   description: "How to improve your brain function, from the right diet to the perfect amount of sleep. And, the benefits will last a lifetime",
   content: "The brain's health affects the entirety of how we function in the present and in the future. The good news is that whether you're Einstein, A or Essex, J you can do a tremendous amount to improve its function. The better news is that those benefits will last a lifetime. So, here are six ways to improve your brain function: Feeding your brain the right diet helps you now and protects you in years to come, like a pension scheme. Your brain needs omega-3 fatty acids, antioxidants, flavanols and polyphenols and the foods that deliver these are all readily available – salmon, walnuts, blueberries, beans, turmeric, avocado, dark greens and dark chocolate. All delicious (but not together).",
   image: "https://gq-images.condecdn.net/image/7lGrpwdrV9p/crop/1620/landscape/f/brain-gq-11jul18_alexander-wells_b.jpg",
-  video: "",
+  video: '<iframe width="560" height="315" src="https://www.youtube.com/embed/-MxxzK0oZY8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>',
   link: "https://www.gq-magazine.co.uk/article/how-to-improve-your-brain-function",
   tags: "Health & Fitness",
   likes: 6,
