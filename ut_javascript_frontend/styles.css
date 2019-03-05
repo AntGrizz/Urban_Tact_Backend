@@ -31,3 +31,20 @@
   max-width: 75vw;
   max-height: 25vw;
 }
+
+#post-table {
+  border-collapse: collapse;
+}
+
+#post-table td {
+  border: 1px solid #000;
+}
+
+.previewPicture {
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 5px;
+}
+
+h2 {
+}
