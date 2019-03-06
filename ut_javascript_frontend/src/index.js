@@ -6,6 +6,8 @@ const usersUrl = 'http://localhost:3000/users';
 
 const postsUrl = 'http://localhost:3000/posts';
 
+const likesUrl = 'http://localhost:3000/likes';
+
 function init() {
   getUsers();
   getPosts();
