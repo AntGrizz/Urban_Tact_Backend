@@ -27,7 +27,7 @@ Despite the very obvious aesthetic cues, “HIS & HERS” extended past all afor
 
 Check out our selection of backstage shots in the gallery above, and be sure to let us know in the comment section following what you are feeling." ,
   description: "The collection’s run of distorted, checkered flag-like layers added a hypnotic touch to a stripped-back selection of pit crew-inspired outerwear pieces. From tailored racing suits, to oversized, black-and-white stripe puffer jackets and rubberized kidney belt accessories, Virgil Abloh’s latest presentation was packed full of the same energy one might expect from a day at the races.", image: "https://static.highsnobiety.com/wp-content/uploads/2019/03/01113920/off-white-fw19-his-hers-pfw-show-03-800x1200.jpg",
-  video: '<iframe width="560" height="315" src="https://www.youtube.com/embed/U6SZR9VMfKw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>',
+  video: '<iframe width="560" height="315" src="https://www.youtube.com/embed/838aWWxTtq0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>',
   tags: "Fashion",
   user_id: jake.id)
 
