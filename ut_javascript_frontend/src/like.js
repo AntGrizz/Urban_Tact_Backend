@@ -5,13 +5,7 @@ class Like {
     Like.all.push(this);
   }
 
-
-
-
-
-
-
-
+  renderLikes() {}
 }
 
-Like.all = []
+Like.all = [];

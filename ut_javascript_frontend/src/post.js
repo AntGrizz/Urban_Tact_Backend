@@ -37,42 +37,63 @@ class Post {
     likeBtn.classList = 'like-btn';
     let postBtn = document.createElement('button');
     postBtn.classList = 'post-btn';
+    let postBreak = document.createElement('br');
+
+    //create a container
+    let picLikesContainer = document.createElement('div');
+    picLikesContainer.classList = 'container';
+    let row = document.createElement('div');
+    row.classList = 'row';
+    let row1 = document.createElement('div');
+    row1.classList = 'col-sm';
+    let row2 = document.createElement('div');
+    row2.classList = 'col-sm';
+    let row3 = document.createElement('div');
+    row3.classList = 'col-sm';
+
+    row1.appendChild(postImage);
+    row3.append(postLikes, likeBtn);
+    row.append(row1, row2, row3);
+    picLikesContainer.appendChild(row);
 
     postTitle.innerText = this.title;
     postImage.src = this.image;
     postDescription.innerText = this.description;
-    postLikes.innerText = `Likes: ${this.likes}`;
-    postTag.innerText = `Tag: ${this.tag}`;
+
+    let numberOfLikes = this.likes.length;
+    postLikes.innerText = `Likes: ${numberOfLikes}`;
+    postLikes.dataset.postId = this.id;
     likeBtn.innerText = 'Like';
+
+    postTag.innerText = `Tag: ${this.tag}`;
     postBtn.innerText = 'Show Post';
     postDiv.toggle = false;
 
-    postLikes.appendChild(likeBtn);
-
     postBtn.addEventListener('click', () => {
       postDiv.toggle = !postDiv.toggle;
-      this.showPost(postDiv);
+      this.showPost(postDiv, postBtn);
     });
 
     postDiv.append(
       postTitle,
-      postImage,
+      picLikesContainer,
       postDescription,
-      postLikes,
-      likeBtn,
-      postBtn
+      postBtn,
+      postBreak
     );
+
     postInfo.appendChild(postDiv);
   }
 
-  showPost(postDiv) {
+  showPost(postDiv, postBtn) {
     if (postDiv.toggle) {
-      this.renderFullPost(postDiv);
-      postDiv.children[5].innerText = 'Hide Post';
+      this.renderFullPost(postDiv, postBtn);
+      postBtn.innerText = 'Hide Post';
     } else {
-      postDiv.children[5].innerText = 'Show Post';
+      // debugger;
+      postBtn.innerText = 'Show Post';
+      postDiv.children[8].remove();
       postDiv.children[7].remove();
-      postDiv.children[6].remove();
     }
   }
 

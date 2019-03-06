@@ -103,6 +103,8 @@ post_6 = Post.create(title: "6 ways to get better at everything right now",
   user_id: stephon.id)
 
 Like.create([{user_id: bill.id, post_id: post_1.id},
+  {user_id: stephon.id, post_id: post_1.id},
+  {user_id: jake.id, post_id: post_1.id},
   {user_id: jake.id, post_id: post_2.id},
   {user_id: paul.id, post_id: post_3.id},
   {user_id: stephon.id, post_id: post_4.id},
