@@ -19,6 +19,7 @@ class Post {
     this.link = link;
     this.likes = likes;
     this.description = description;
+    this.newPostEventListener();
     Post.all.push(this);
   }
 
@@ -95,7 +96,6 @@ class Post {
       this.renderFullPost(postDiv, postVideo);
       postBtn.innerText = 'Hide Post';
     } else {
-      debugger;
       postBtn.innerText = 'Show Post';
       document.querySelector(`[data-video-id="${this.id}"]`).remove();
       document.querySelector(`[data-content-id="${this.id}"]`).remove();
@@ -112,6 +112,38 @@ class Post {
     postVideo.dataset.videoId = this.id;
 
     postDiv.append(postVideo, postContent);
+  }
+
+  newPostEventListener() {
+    let newPost = document.querySelector('#new-post-form');
+    newPost.addEventListener('submit', e => {
+      this.captureNewPostValues(e, newPost);
+    });
+  }
+
+  captureNewPostValues(e, newPost) {
+    e.preventDefault();
+    let title = newPost.children[0];
+    let image = newPost.children[1];
+    let description = newPost.children[2];
+    let content = newPost.children[3];
+    let video = newPost.children[4];
+    let link = newPost.children[5];
+    let tags = newPost.clildren[6];
+
+    this.createNewPost(title, image, description, content, video, link, tags);
+  }
+
+  createNewPost(title, image, description, content, video, link, tags) {
+    data = {
+      title: title,
+      image: image,
+      description: description,
+      content: content,
+      video: video,
+      link: link,
+      tags: tags
+    };
   }
 }
 Post.all = [];
