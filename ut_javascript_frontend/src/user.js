@@ -7,8 +7,8 @@ class User {
     User.all.push(this);
   }
 
-  renderUsers() {
-    document
+  renderUser(e) {
+
   }
 }
 
