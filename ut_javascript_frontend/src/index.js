@@ -12,6 +12,7 @@ function init() {
   getUsers();
   getPosts();
   User.renderUserForm();
+  Post.newPostEventListener();
 }
 
 function getUsers() {
@@ -40,7 +41,8 @@ function getPosts() {
           post.tags,
           post.link,
           post.likes,
-          post.description
+          post.description,
+          post.user_id
         );
         postInstance.renderPostPreview();
       });

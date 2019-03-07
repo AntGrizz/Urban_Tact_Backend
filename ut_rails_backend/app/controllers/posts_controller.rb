@@ -5,6 +5,13 @@ class PostsController < ApplicationController
     render json: @posts
   end
 
+
+
+  def create
+      @post = Post.create!(post_params)
+      render json: @post
+  end
+
   def update
     @post.update(post_params)
     if @post.save
@@ -17,7 +24,7 @@ class PostsController < ApplicationController
   private
 
   def post_params
-    params.permit(:title, :content, :description, :image, :link, :tags, :likes)
+    params.require(:post).permit(:title, :content, :description, :image, :video, :link, :tags, :likes, :user_id)
   end
 
 

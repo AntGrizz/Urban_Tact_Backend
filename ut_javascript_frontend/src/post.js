@@ -8,7 +8,8 @@ class Post {
     tags,
     link,
     likes,
-    description
+    description,
+    user_id
   ) {
     this.id = id;
     this.title = title;
@@ -19,7 +20,7 @@ class Post {
     this.link = link;
     this.likes = likes;
     this.description = description;
-    this.newPostEventListener();
+    this.user_id = user_id;
     Post.all.push(this);
   }
 
@@ -114,26 +115,26 @@ class Post {
     postDiv.append(postVideo, postContent);
   }
 
-  newPostEventListener() {
-    let newPost = document.querySelector('#new-post-form');
-    newPost.addEventListener('submit', e => {
-      this.captureNewPostValues(e, newPost);
+  static newPostEventListener() {
+    document.querySelector('#new-post-form').addEventListener('submit', e => {
+      Post.captureNewPostValues(e);
     });
   }
 
-  captureNewPostValues(e, newPost) {
+  static captureNewPostValues(e) {
     e.preventDefault();
-    let userId = sessionStorage.user_id;
+    let user_id = parseInt(sessionStorage.user_id);
 
-    let title = newPost.children[0];
-    let image = newPost.children[1];
-    let description = newPost.children[2];
-    let content = newPost.children[3];
-    let video = newPost.children[4];
-    let link = newPost.children[5];
-    let tags = newPost.clildren[6];
+    let title = document.querySelector('#new-title').value;
+    let image = document.querySelector('#new-image').value;
+    let description = document.querySelector('#new-description').value;
+    let content = document.querySelector('#new-content').value;
+    let video = document.querySelector('#new-video').value;
+    let link = document.querySelector('#new-link').value;
+    let tags = document.querySelector('#new-tag').value;
 
-    this.createNewPost(
+    debugger;
+    Post.createNewPost(
       title,
       image,
       description,
@@ -141,12 +142,21 @@ class Post {
       video,
       link,
       tags,
-      userId
+      user_id
     );
   }
 
-  createNewPost(title, image, description, content, video, link, tags) {
-    data = {
+  static createNewPost(
+    title,
+    image,
+    description,
+    content,
+    video,
+    link,
+    tags,
+    user_id
+  ) {
+    let data = {
       title: title,
       image: image,
       description: description,
@@ -154,8 +164,23 @@ class Post {
       video: video,
       link: link,
       tags: tags,
-      user: 
+      likes: [],
+      user_id: user_id
     };
+
+    debugger;
+
+    fetch('http://localhost:3000/posts', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(data)
+    })
+      .then(res => res.json())
+      .then(json => {
+        console.log(json);
+      });
   }
 }
 Post.all = [];
