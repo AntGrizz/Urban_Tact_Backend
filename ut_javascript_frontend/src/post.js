@@ -37,7 +37,12 @@ class Post {
     likeBtn.classList = 'like-btn';
     let postBtn = document.createElement('button');
     postBtn.classList = 'post-btn';
-    let postBreak = document.createElement('br');
+    let postBreak1 = document.createElement('br');
+    let postBreak2 = document.createElement('br');
+    let postVideo = document.createElement('iframe');
+    postVideo.width = 560;
+    postVideo.height = 315;
+    postVideo.frameBorder = 0;
 
     //create a container
     let picLikesContainer = document.createElement('div');
@@ -45,15 +50,13 @@ class Post {
     let row = document.createElement('div');
     row.classList = 'row';
     let row1 = document.createElement('div');
-    row1.classList = 'col-sm';
+    row1.classList = 'col-sm row1';
     let row2 = document.createElement('div');
-    row2.classList = 'col-sm';
-    let row3 = document.createElement('div');
-    row3.classList = 'col-sm';
+    row2.classList = 'col-sm col2';
 
     row1.appendChild(postImage);
-    row3.append(postLikes, likeBtn);
-    row.append(row1, row2, row3);
+    row2.append(postLikes, likeBtn);
+    row.append(row1, row2);
     picLikesContainer.appendChild(row);
 
     postTitle.innerText = this.title;
@@ -63,6 +66,7 @@ class Post {
     let numberOfLikes = this.likes.length;
     postLikes.innerText = `Likes: ${numberOfLikes}`;
     postLikes.dataset.postId = this.id;
+    postLikes.classList = 'plikes';
     likeBtn.innerText = 'Like';
 
     postTag.innerText = `Tag: ${this.tag}`;
@@ -71,7 +75,7 @@ class Post {
 
     postBtn.addEventListener('click', () => {
       postDiv.toggle = !postDiv.toggle;
-      this.showPost(postDiv, postBtn);
+      this.showPost(postDiv, postBtn, postVideo);
     });
 
     postDiv.append(
@@ -79,32 +83,35 @@ class Post {
       picLikesContainer,
       postDescription,
       postBtn,
-      postBreak
+      postBreak1,
+      postBreak2
     );
 
     postInfo.appendChild(postDiv);
   }
 
-  showPost(postDiv, postBtn) {
+  showPost(postDiv, postBtn, postVideo) {
     if (postDiv.toggle) {
-      this.renderFullPost(postDiv, postBtn);
+      this.renderFullPost(postDiv, postVideo);
       postBtn.innerText = 'Hide Post';
     } else {
-      // debugger;
+      debugger;
       postBtn.innerText = 'Show Post';
-      postDiv.children[8].remove();
-      postDiv.children[7].remove();
+      document.querySelector(`[data-video-id="${this.id}"]`).remove();
+      document.querySelector(`[data-content-id="${this.id}"]`).remove();
     }
   }
 
-  renderFullPost(postDiv) {
+  renderFullPost(postDiv, postVideo) {
     let postContent = document.createElement('p');
+    postVideo.src = this.video;
     postContent.innerText = this.content;
     postContent.classList = 'post-content';
 
-    postDiv.insertAdjacentHTML('beforeend', this.video);
-    postDiv.appendChild(postContent);
-    // debugger;
+    postContent.dataset.contentId = this.id;
+    postVideo.dataset.videoId = this.id;
+
+    postDiv.append(postVideo, postContent);
   }
 }
 Post.all = [];
