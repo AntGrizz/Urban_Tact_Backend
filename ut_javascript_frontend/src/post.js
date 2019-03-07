@@ -123,6 +123,8 @@ class Post {
 
   captureNewPostValues(e, newPost) {
     e.preventDefault();
+    let userId = sessionStorage.user_id;
+
     let title = newPost.children[0];
     let image = newPost.children[1];
     let description = newPost.children[2];
@@ -131,7 +133,16 @@ class Post {
     let link = newPost.children[5];
     let tags = newPost.clildren[6];
 
-    this.createNewPost(title, image, description, content, video, link, tags);
+    this.createNewPost(
+      title,
+      image,
+      description,
+      content,
+      video,
+      link,
+      tags,
+      userId
+    );
   }
 
   createNewPost(title, image, description, content, video, link, tags) {
@@ -142,7 +153,8 @@ class Post {
       content: content,
       video: video,
       link: link,
-      tags: tags
+      tags: tags,
+      user: 
     };
   }
 }
