@@ -1,26 +1,32 @@
 document.addEventListener('DOMContentLoaded', () => {
   init();
+
 });
 
 const usersUrl = 'http://localhost:3000/users';
 
 const postsUrl = 'http://localhost:3000/posts';
 
-<<<<<<< HEAD
-const likesUrl = `http://localhost:3000/likes`;
-=======
 const likesUrl = 'http://localhost:3000/likes';
->>>>>>> f0bd9f255e45b2bf9be14f17e728d7d094704530
 
 function init() {
   getUsers();
   getPosts();
+  User.renderUserForm()
 }
 
 function getUsers() {
   fetch(usersUrl)
     .then(res => res.json())
-    .then(users => console.log(users));
+    .then(users => {
+      console.log(users);
+      users.forEach(user => {
+        let userInstance = new User(
+          user.id,
+          user.username
+        );
+      });
+})
 }
 
 function getPosts() {
@@ -47,7 +53,7 @@ function getPosts() {
 
 function newPost(e){
   let data = {
-    
+
   }
 }
 
