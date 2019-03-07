@@ -2,7 +2,7 @@ class UsersController < ApplicationController
 
  def index
     @users = User.all
-    render json: @users
+    render json: @users 
   end
 
   def update
@@ -19,5 +19,5 @@ class UsersController < ApplicationController
   def user_params
     params.permit(:username, :image, :email)
   end
-  
+
 end
