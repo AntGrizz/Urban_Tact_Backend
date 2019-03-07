@@ -11,12 +11,18 @@ const likesUrl = `http://localhost:3000/likes`;
 function init() {
   getUsers();
   getPosts();
+  User.renderUserForm();
 }
 
 function getUsers() {
   fetch(usersUrl)
     .then(res => res.json())
-    .then(users => console.log(users));
+    .then(users => {
+      console.log(users);
+      users.forEach(user => {
+        let userInstance = new User(user.id, user.username);
+      });
+    });
 }
 
 function getPosts() {
@@ -39,10 +45,6 @@ function getPosts() {
         postInstance.renderPostPreview();
       });
     });
-}
-
-function newPost(e) {
-  let data = {};
 }
 
 function newLike(user, post) {
