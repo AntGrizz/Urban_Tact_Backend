@@ -39,9 +39,9 @@ class Post {
     likeBtn.addEventListener('click', () => {
       this.updateLikes(postLikes);
     });
-    likeBtn.classList = 'like-btn';
+    likeBtn.classList = 'like-btn btn btn - secondary';
     let postBtn = document.createElement('button');
-    postBtn.classList = 'post-btn';
+    postBtn.classList = 'post-btn btn btn-info';
     let postBreak1 = document.createElement('br');
     let postBreak2 = document.createElement('br');
     let postVideo = document.createElement('iframe');
@@ -50,6 +50,7 @@ class Post {
     postVideo.frameBorder = 0;
     let deletePost = document.createElement('button');
     deletePost.innerText = 'Delete Post';
+    deletePost.classList = 'btn btn-danger';
     deletePost.id = `delete-${this.id}`;
     deletePost.addEventListener('click', () => {
       this.deletePost(postDiv);
