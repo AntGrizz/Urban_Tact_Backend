@@ -92,6 +92,10 @@ class Post {
     postInfo.appendChild(postDiv);
   }
 
+  newPost(){
+
+  }
+
   showPost(postDiv, postBtn, postVideo) {
     if (postDiv.toggle) {
       this.renderFullPost(postDiv, postVideo);
@@ -168,8 +172,6 @@ class Post {
       user_id: user_id
     };
 
-    debugger;
-
     fetch('http://localhost:3000/posts', {
       method: 'POST',
       headers: {
@@ -178,9 +180,20 @@ class Post {
       body: JSON.stringify(data)
     })
       .then(res => res.json())
-      .then(json => {
-        console.log(json);
+      .then(post => {
+        const newPost = new Post(post.id,
+        post.title,
+        post.image,
+        post.video,
+        post.content,
+        post.tags,
+        post.link,
+        post.likes,
+        post.description,
+        post.user_id);
+        newPost.renderPostPreview()
       });
+
   }
   // new post addition
 }
