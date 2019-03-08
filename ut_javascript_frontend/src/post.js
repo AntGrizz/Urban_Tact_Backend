@@ -35,10 +35,10 @@ class Post {
     let postTag = document.createElement('p');
     postTag.classList = 'post-tag';
     let postLikes = document.createElement('p');
-    let likeBtn = document.createElement('button')
-    likeBtn.addEventListener('click', ()=> {
-      this.updateLikes(postLikes)
-    })
+    let likeBtn = document.createElement('button');
+    likeBtn.addEventListener('click', () => {
+      this.updateLikes(postLikes);
+    });
     likeBtn.classList = 'like-btn';
     let postBtn = document.createElement('button');
     postBtn.classList = 'post-btn';
@@ -48,10 +48,12 @@ class Post {
     postVideo.width = 560;
     postVideo.height = 315;
     postVideo.frameBorder = 0;
-    let deletePost = document.createElement('button')
-    deletePost.innerText = "Delete Post"
-    deletePost.id = `delete-${this.id}`
-    deletePost.addEventListener('click', ()=>{this.deletePost(postDiv)})
+    let deletePost = document.createElement('button');
+    deletePost.innerText = 'Delete Post';
+    deletePost.id = `delete-${this.id}`;
+    deletePost.addEventListener('click', () => {
+      this.deletePost(postDiv);
+    });
 
     //create a container
     let picLikesContainer = document.createElement('div');
@@ -100,9 +102,7 @@ class Post {
     postInfo.appendChild(postDiv);
   }
 
-  newPost(){
-
-  }
+  newPost() {}
 
   showPost(postDiv, postBtn, postVideo) {
     if (postDiv.toggle) {
@@ -156,6 +156,7 @@ class Post {
       tags,
       user_id
     );
+    document.querySelector('#new-post-form').reset();
   }
 
   static createNewPost(
@@ -189,51 +190,51 @@ class Post {
     })
       .then(res => res.json())
       .then(post => {
-        const newPost = new Post(post.id,
-        post.title,
-        post.image,
-        post.video,
-        post.content,
-        post.tags,
-        post.link,
-        post.likes,
-        post.description,
-        post.user_id);
-        newPost.renderPostPreview()
+        const newPost = new Post(
+          post.id,
+          post.title,
+          post.image,
+          post.video,
+          post.content,
+          post.tags,
+          post.link,
+          post.likes,
+          post.description,
+          post.user_id
+        );
+        newPost.renderPostPreview();
       });
-
   }
 
-  updateLikes(postLikes){
-    console.log(postLikes)
-      let likes
-      likes = postLikes.innerText.split(" ")[1]
-    postLikes.innerText = `Likes: ${++likes}`
+  updateLikes(postLikes) {
+    console.log(postLikes);
+    let likes;
+    likes = postLikes.innerText.split(' ')[1];
+    postLikes.innerText = `Likes: ${++likes}`;
     let data = {
       user_id: sessionStorage.user_id,
       post_id: this.id
-    }
-    fetch(`http://localhost:3000/likes`,{
+    };
+    fetch(`http://localhost:3000/likes`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
       },
       body: JSON.stringify(data)
     })
-    .then(res => res.json())
-    .then(json => console.log(json))
-    }
+      .then(res => res.json())
+      .then(json => console.log(json));
+  }
 
-  deletePost(postDiv){
-    let data = {id: this.id}
+  deletePost(postDiv) {
+    let data = { id: this.id };
     fetch(`http://localhost:3000/posts/${this.id}`, {
       method: 'DELETE',
       headers: {
         'Content-Type': 'application/json'
       },
       body: JSON.stringify(data)
-    })
-      .then(postDiv.remove())
+    }).then(postDiv.remove());
   }
   // new post addition
 }
