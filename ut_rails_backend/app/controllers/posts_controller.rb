@@ -21,6 +21,12 @@ class PostsController < ApplicationController
     end
   end
 
+  def destroy
+    @post = Post.all.find(params[:id])
+    @post.destroy
+
+  end
+
   private
 
   def post_params

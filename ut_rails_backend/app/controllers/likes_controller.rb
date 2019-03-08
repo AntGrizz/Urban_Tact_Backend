@@ -5,6 +5,11 @@ class LikesController < ApplicationController
       render json: @likes
   end
 
+  def create
+      @like = Like.create!(like_params)
+      render json: @like
+  end
+
   def update
       @like.update(like_params)
     if @like.save
@@ -17,7 +22,7 @@ class LikesController < ApplicationController
 private
 
     def like_params
-       params.permit(:title, :content)
+       params.permit(:user_id, :post_id)
   end
 
 
