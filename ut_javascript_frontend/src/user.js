@@ -6,7 +6,7 @@ class User {
   }
 
   static renderUserForm(){
-    let tag_bar = document.getElementById('tag-bar')
+    let tag_bar = document.getElementById('form-thing')
     let form = document.createElement('form')
     let input = document.createElement('input')
     let submit = document.createElement('input')

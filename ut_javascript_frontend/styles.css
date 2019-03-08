@@ -1,14 +1,35 @@
 #tag-bar {
-  height: 10vh;
-  background: rgb(0, 0, 53);
-  display: flex;
+  height: 15vh;
+  background: rgb(54, 54, 100);
+ flex-flow: row;
   /* justify-content: space-around; */
-  align-items: flex-end;
+}
+
+.container{
+  margin: 5px;
+  margin-bottom: 5px;
+  padding: 0;
+  margin-right: 0;
+  max-width: 112.5rem;
+}
+
+img#urban-tact{
+  position: absolute;
+      top: -30px;
+}
+
+#filter-bar{
+  /* display: flex; */
+  align-items: center;
+  justify-content: center;
+  justify-content: left;
+  top: 5.9875rem;
 }
 
 .tag-wrapper {
   list-style-type: none;
   display: inline;
+  text-align: center;
 }
 
 .tag-element {
@@ -17,6 +38,7 @@
   display: inline;
   padding: 10px;
   font-size: 15pt;
+  text-align: center;
 }
 
 li:hover {
@@ -24,10 +46,15 @@ li:hover {
   color: rgb(222, 77, 103);
 }
 #UT-header {
-  background: #dedede;
   margin: 0;
-  padding: 5px;
+  padding: 0px;
   text-align: center;
+  height: 9.8493rem;
+  height: 10rem;
+}
+
+#UT-header img{
+  height: 50%
 }
 
 #post-info {
@@ -72,6 +99,13 @@ img.previewPicture {
   width: 500px;
   flex-flow: column;
   align-items: flex-start;
+}
+
+#form-thing{
+  align-items: center;
+  top: 5.9875rem;
+  left: 9.9875rem;
+
 }
 
 .row {
