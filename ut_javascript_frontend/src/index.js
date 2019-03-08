@@ -62,13 +62,14 @@ function filterPosts(posts, e) {
     let filteredPosts = posts.filter(post => {
       return post.tags === e;
     });
+    debugger;
     for (let i of container) {
-      i.remove();
+      i.innerHTML = '';
     }
     renderPostPreview(filteredPosts);
   } else {
     for (let i of container) {
-      i.remove();
+      i.innerHTML = '';
     }
     renderPostPreview(posts);
   }
