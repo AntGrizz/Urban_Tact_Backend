@@ -182,5 +182,6 @@ class Post {
         console.log(json);
       });
   }
+  // new post addition
 }
 Post.all = [];
